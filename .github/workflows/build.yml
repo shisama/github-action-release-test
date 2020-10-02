@@ -14,7 +14,8 @@ jobs:
       - run: |
           yarn install
           yarn build
-      - uses: actions/upload-release-asset@v1  
+      - name: Upload macos binary file
+        uses: actions/upload-release-asset@v1
         env:  
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  
         with:  
@@ -22,7 +23,8 @@ jobs:
           asset_path: ./bin/index-linux
           asset_name: linux
           asset_content_type: application/octet-stream
-      - uses: actions/upload-release-asset@v1  
+      - name: Upload linux binary file  
+        uses: actions/upload-release-asset@v1  
         env:  
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  
         with:  
@@ -30,11 +32,12 @@ jobs:
           asset_path: ./bin/index-macos
           asset_name: macos
           asset_content_type: application/octet-stream
-      - uses: actions/upload-release-asset@v1  
+      - name: Upload windows binary file
+        uses: actions/upload-release-asset@v1  
         env:  
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  
         with:  
           upload_url: ${{ github.event.release.upload_url }}  
-          asset_path: ./bin/index-win
+          asset_path: ./bin/index-win.exe
           asset_name: win
           asset_content_type: application/octet-stream
