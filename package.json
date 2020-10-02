@@ -1,0 +1,14 @@
+{
+  "name": "github-action-release-test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:shisama/github-action-release-test.git",
+  "author": "shisama <shisama07@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "pkg index.js --out-path bin"
+  },
+  "devDependencies": {
+    "pkg": "^4.4.9"
+  }
+}
