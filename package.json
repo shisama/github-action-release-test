@@ -1,6 +1,6 @@
 {
   "name": "github-action-release-test",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "main": "index.js",
   "repository": "git@github.com:shisama/github-action-release-test.git",
   "author": "shisama <shisama07@gmail.com>",
