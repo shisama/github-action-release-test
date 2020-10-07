@@ -5,10 +5,18 @@
   "repository": "git@github.com:shisama/github-action-release-test.git",
   "author": "shisama <shisama07@gmail.com>",
   "license": "MIT",
+  "workspaces": [
+    "packages/*",
+    "examples/*"
+  ],
+  "private": true,
   "scripts": {
-    "build": "pkg index.js --out-path bin"
+    "build": "lerna run build",
+    "clean": "lerna run clean"
   },
   "devDependencies": {
-    "pkg": "^4.4.9"
+    "lerna": "^3.22.1",
+    "pkg": "^4.4.9",
+    "rimraf": "^3.0.2"
   }
 }

@@ -13,8 +13,10 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
       - run: |
           yarn install
+          yarn clean
           yarn build
       - name: Upload macos binary file
+        if: contains(${{ github.event.release.tag_name }}, "@shisama/package-b")  
         uses: actions/upload-release-asset@v1
         env:  
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  
@@ -24,6 +26,7 @@ jobs:
           asset_name: linux
           asset_content_type: application/octet-stream
       - name: Upload linux binary file  
+        if: contains(${{ github.event.release.tag_name }}, "@shisama/package-b")  
         uses: actions/upload-release-asset@v1  
         env:  
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  
@@ -33,6 +36,7 @@ jobs:
           asset_name: macos
           asset_content_type: application/octet-stream
       - name: Upload windows binary file
+        if: contains(${{ github.event.release.tag_name }}, "@shisama/package-b")  
         uses: actions/upload-release-asset@v1  
         env:  
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  
