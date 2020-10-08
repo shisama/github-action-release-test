@@ -22,6 +22,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  
         with:  
           upload_url: ${{ github.event.release.upload_url }}  
-          asset_path: ./packages/package-b/bin/*  
+          asset_path: ./packages/package-b/bin/*
           asset_name: package-b
           asset_content_type: application/octet-stream
