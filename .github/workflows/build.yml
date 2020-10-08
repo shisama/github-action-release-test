@@ -15,7 +15,7 @@ jobs:
           yarn install
           yarn clean
           yarn build
-      - name: Upload macos binary file
+      - name: Upload binary file
         if: contains(${{ github.event.release.tag_name }}, "@shisama/package-b")  
         uses: actions/upload-release-asset@v1
         env:  
@@ -23,4 +23,5 @@ jobs:
         with:  
           upload_url: ${{ github.event.release.upload_url }}  
           asset_path: ./packages/package-b/bin/*  
+          asset_name: package-b
           asset_content_type: application/octet-stream
