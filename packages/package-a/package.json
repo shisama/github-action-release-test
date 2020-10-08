@@ -5,7 +5,7 @@
   "author": "shisama <shisama07@gmail.com>",
   "homepage": "https://github.com/shisama/github-action-release-test#readme",
   "license": "ISC",
-  "main": "lib/index.js",
+  "bin": "lib/index.js",
   "private": true,
   "directories": {
     "lib": "lib",
@@ -19,7 +19,7 @@
     "url": "git+https://github.com/shisama/github-action-release-test.git"
   },
   "scripts": {
-    "build": "pkg ./lib/index.js --out-path bin",
+    "build": "echo 'no build'",
     "clean": "rimraf ./bin"
   },
   "bugs": {

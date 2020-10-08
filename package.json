@@ -11,7 +11,8 @@
   ],
   "private": true,
   "scripts": {
-    "build": "lerna run build",
+    "build": "lerna run build --stream",
+    "release": "lerna publish --conventional-commits",
     "clean": "lerna run clean"
   },
   "devDependencies": {
