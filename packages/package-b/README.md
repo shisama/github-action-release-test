@@ -1,3 +1,3 @@
-# `package-b`
+# package-b
 
 ## 👻 THIS IS TEST PACKAGE FOR GITHUB ACTIONS
