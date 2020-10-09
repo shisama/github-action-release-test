@@ -30,7 +30,7 @@ jobs:
         env:  
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  
         with:  
-          upload_url: ${{ steps.create_release.outputs.u }}  
+          upload_url: ${{ steps.create_release.outputs.upload_url }}  
           asset_path: ./packages/package-b/bin/package-b-macos
           asset_name: macos
           asset_content_type: application/octet-stream
