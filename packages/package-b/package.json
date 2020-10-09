@@ -4,7 +4,7 @@
   "description": "> TODO: description",
   "author": "shisama <shisama07@gmail.com>",
   "homepage": "https://github.com/shisama/github-action-release-test#readme",
-  "license": "ISC",
+  "license": "MIT",
   "bin": "lib/index.js",
   "private": true,
   "directories": {
