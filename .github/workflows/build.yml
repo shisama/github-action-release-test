@@ -8,7 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - env:
-        PKG_NAME: package-b
+          PKG_NAME: package-b
+        run: echo ${PKG_NAME}
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
         with:
