@@ -16,6 +16,9 @@ jobs:
           yarn install
           yarn clean
           yarn build
+      - name: Set Version
+        id: version
+        run: echo "::set-output name=version::$(echo ${{ github.ref }} | cut -d'/' -f3)"
       - name: Upload macos binary file
         uses: actions/upload-release-asset@v1
         env:  
