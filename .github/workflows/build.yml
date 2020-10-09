@@ -1,10 +1,10 @@
 on:  
-  release:  
-    types: [published]  
+  push:  
+    tags:
+      - '@shisama/package-b@*'
 
 jobs:  
   release:
-    if: contains(${{ github.event.release.tag_name }}, "@shisama/package-b")  
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
