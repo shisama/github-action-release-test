@@ -1,4 +1,3 @@
 # `package-a`
-===
 
 ## 👻 THIS IS TEST PACKAGE FOR GITHUB ACTIONS
