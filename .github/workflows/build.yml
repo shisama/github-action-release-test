@@ -16,11 +16,14 @@ jobs:
           yarn install
           yarn clean
           yarn build
+      - name: Get tag name
+        id: get_tag_name
+        run: echo ::set-output name=TAG_NAME::${GITHUB_REF#refs/tags/}
       - name: Get tag upload URL
         id: tag_upload_url
         uses: pdamianik/release-tag-to-upload-url-action@v1.0.1
         with:
-          tag: ${{ github.ref }}
+          tag: ${{ steps.get_tag_name.outputs.TAG_NAME }}
           token: ${{ github.token }}
       - name: Upload macos binary file
         uses: actions/upload-release-asset@v1
