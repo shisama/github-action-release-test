@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.18](https://github.com/shisama/github-action-release-test/compare/@shisama/package-a@0.0.17...@shisama/package-a@0.0.18) (2020-10-12)
+
+**Note:** Version bump only for package @shisama/package-a
+
+
+
+
+
 ## [0.0.17](https://github.com/shisama/github-action-release-test/compare/@shisama/package-a@0.0.16...@shisama/package-a@0.0.17) (2020-10-12)
 
 **Note:** Version bump only for package @shisama/package-a
